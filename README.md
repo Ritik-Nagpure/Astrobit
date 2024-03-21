@@ -1,30 +1,56 @@
-# React + TypeScript + Vite
+# AstroBit Crypto Wallet App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+AstroBit is a beautifully designed crypto wallet application built using React, Tailwind CSS, and Redux. It features a stunning user interface, responsiveness across various devices, and high-speed performance.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Beautiful UI**: AstroBit boasts a modern and visually appealing user interface designed to enhance the user experience.
+- **Responsive Design**: The app is fully responsive, ensuring optimal viewing and interaction experience across a wide range of devices.
+- **Fast Performance**: With optimized code and efficient rendering, AstroBit delivers blazing-fast performance, allowing users to access their crypto assets quickly.
+- **Crypto Wallet**: Securely store, send, and receive various cryptocurrencies with ease.
+- **Transaction History**: Keep track of all your crypto transactions conveniently within the app.
+- **Redux State Management**: Utilizes Redux for efficient state management, ensuring data consistency and seamless user interaction.
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **React**: A JavaScript library for building user interfaces.
+- **Tailwind CSS**: A utility-first CSS framework for building custom designs quickly.
+- **Redux**: A predictable state container for JavaScript apps, ensuring consistent state management.
 
-- Configure the top-level `parserOptions` property like this:
+## Installation
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+To run AstroBit locally, follow these steps:
+
+1. Clone the repository:
+```
+git clone https://github.com/Ritik-Nagpure/Astrobit.git
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+2. Navigate to the project directory:
+```
+cd Astrobit
+```
+
+3. Install dependencies:
+```
+npm install
+```
+
+4. Start the development server:
+```
+npm run dev
+```
+
+5. Open your browser and visit `http://localhost:5173` to view the app.
+
+## Contributing
+
+Contributions are welcome! If you'd like to contribute to AstroBit, please follow these guidelines:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix: `git checkout -b feature-name`.
+3. Make your changes and ensure they are working as expected.
+4. Commit your changes: `git commit -m "Description of your changes"`.
+5. Push to the branch: `git push origin feature-name`.
+6. Submit a pull request detailing your changes.
+

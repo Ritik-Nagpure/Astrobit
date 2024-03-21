@@ -1,28 +1,71 @@
+import React, { useState } from "react";
 
 function Header() {
-    return (
-        <div className="container-fluid mx-auto rounded-md sm:h-fit w-full">
-            <div className="flex flex-row justify-between mx-1">
-                <div className="flex flex-row justify-start p-1">
-                    {/* <img src={favicon} className='rounded-full h-12 w-12' /> */}
-                    <p className="text-3xl ml-2 font-bold m-auto font-cursive text-cyan-500 ">                        
-                        Habla
-                    </p>
-                </div>
-                <div className="sm:w-2/5 w-fit px-3 bg-gray-200 border-2 border-gray-400 rounded-full my-1">
-                    <p className="py-2 text-center text-xl ">
-                        Search
-                    </p>
-                </div>
-                <div className="flex flex-row justify-end w-24">
-                    <p className="text-lg">
-                    {/* <img src={profile} className='rounded-full h-12 w-12' /> */}
-                    </p>
-                </div>
+  const [isOpen, setIsOpen] = useState(false);
 
-            </div>
+  const toggleSidebar = () => {
+    setIsOpen(!isOpen);
+  };
+
+  return (
+    <div className="bg-gray-800 container-fluid sm:h-fit flex flex-row justify-between">
+      <div className="justify-center sm:justify-start p-1">
+        <p className="text-3xl ml-2 font-bold m-auto font-cursive text-cyan-500 ">
+          Astrobit
+        </p>
+      </div>
+
+      <div className="justify-end">
+        {/* Button to toggle sidebar */}
+        <button
+          onClick={toggleSidebar}
+          className="block sm:hidden absolute top-0 left-0 p-2 text-gray-600"
+        >
+          {/* Hamburger icon */}
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M4 6h16M4 12h16m-7 6h7"
+            />
+          </svg>
+        </button>
+
+        {/* Collapsible sidebar */}
+        <div
+          className={`${
+            isOpen ? "block" : "hidden"
+          } sm:block sm:relative sm:w-56 sm:flex-shrink-0 sm:overflow-y-auto sm:bg-gray-900 sm:text-white flex flex-row`}
+        >
+          {/* Sidebar content */}
+          <ul className="p-4">
+            <li>
+              <a href="#" className="block py-2">
+                Link 1
+              </a>
+            </li>
+            <li>
+              <a href="#" className="block py-2">
+                Link 2
+              </a>
+            </li>
+            <li>
+              <a href="#" className="block py-2">
+                Link 3
+              </a>
+            </li>
+          </ul>
         </div>
-    )
+      </div>
+    </div>
+  );
 }
 
-export default Header
+export default Header;
