@@ -1,7 +1,7 @@
 
 
 function App() {
-  const appname = 'React Starter Kit';
+  const appname = 'Astrobit';
   return (
     <div className="flex flex-col items-center justify-center min-h-screen">
           <p className="text-6xl font-bold text-center text-gray-300">
